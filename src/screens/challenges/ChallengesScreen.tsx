@@ -2,12 +2,25 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, SafeAreaView, Pressable } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { CompositeNavigationProp } from '@react-navigation/native';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { RootStackParamList, MainTabParamList } from '../../types/navigation';
 import { theme } from '../../theme/theme';
 import { Card } from '../../components/cards/Card';
 import { useTracking } from '../../context/TrackingContext';
 import { Challenge } from '../../types/meal';
 
-export const ChallengesScreen: React.FC = () => {
+type ChallengesScreenNavigationProp = CompositeNavigationProp<
+  BottomTabNavigationProp<MainTabParamList, 'Challenges'>,
+  NativeStackScreenProps<RootStackParamList>['navigation']
+>;
+
+interface Props {
+  navigation: ChallengesScreenNavigationProp;
+}
+
+export const ChallengesScreen: React.FC<Props> = ({ navigation }) => {
   const { t } = useTranslation();
   const { challenges, enrollChallenge, leaveChallenge } = useTracking();
 
@@ -21,13 +34,7 @@ export const ChallengesScreen: React.FC = () => {
       <Pressable
         key={challenge.id}
         style={styles.challengeCard}
-        onPress={() => {
-          if (isEnrolled) {
-            leaveChallenge(challenge.id);
-          } else {
-            enrollChallenge(challenge.id);
-          }
-        }}
+        onPress={() => navigation.navigate('ChallengeDetail', { challengeId: challenge.id })}
       >
         <View style={[styles.challengeCardBg, { backgroundColor: challenge.color + '15' }]}>
           <View style={styles.challengeCardContent}>
@@ -80,10 +87,24 @@ export const ChallengesScreen: React.FC = () => {
         </View>
 
         <ScrollView showsVerticalScrollIndicator={false} style={styles.challengesList}>
-          {/* All Challenges */}
-          {[...enrolledChallenges, ...availableChallenges].map(ch =>
-            renderChallengeCard(ch, ch.enrolled)
+          {/* Enrolled Challenges */}
+          {enrolledChallenges.length > 0 && (
+            <>
+              <Text style={styles.sectionTitle}>{t('challenges.enrolled')}</Text>
+              {enrolledChallenges.map(ch => renderChallengeCard(ch, true))}
+            </>
           )}
+
+          {/* Available Challenges */}
+          {availableChallenges.length > 0 && (
+            <>
+              <Text style={[styles.sectionTitle, { marginTop: theme.spacing.lg }]}>
+                {t('challenges.available')}
+              </Text>
+              {availableChallenges.map(ch => renderChallengeCard(ch, false))}
+            </>
+          )}
+
           <View style={styles.bottomSpacing} />
         </ScrollView>
       </View>
@@ -110,6 +131,12 @@ const styles = StyleSheet.create({
   },
   challengesList: {
     flex: 1,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: theme.colors.textDark,
+    marginBottom: theme.spacing.md,
   },
   challengeCard: {
     marginBottom: theme.spacing.md,
