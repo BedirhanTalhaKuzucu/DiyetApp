@@ -352,23 +352,28 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
               {enrolledChallenges.slice(0, 2).map((challenge) => {
                 const progress = Math.round((challenge.current / challenge.target) * 100);
                 return (
-                  <Card key={challenge.id} style={styles.challengeProgressCard}>
-                    <View style={styles.challengeProgressContent}>
-                      <View style={[styles.challengeProgressIcon, { backgroundColor: challenge.color + '20' }]}>
-                        <Ionicons name={challenge.icon as any} size={20} color={challenge.color} />
-                      </View>
-
-                      <View style={styles.challengeProgressInfo}>
-                        <Text style={styles.challengeProgressName}>{challenge.name}</Text>
-                        <View style={styles.challengeProgressBg}>
-                          <View style={[styles.challengeProgressFg, { width: `${Math.min(progress, 100)}%`, backgroundColor: challenge.color }]} />
+                  <Pressable
+                    key={challenge.id}
+                    onPress={() => navigation.navigate('ChallengeDetail', { challengeId: challenge.id })}
+                  >
+                    <Card style={styles.challengeProgressCard}>
+                      <View style={styles.challengeProgressContent}>
+                        <View style={[styles.challengeProgressIcon, { backgroundColor: challenge.color + '20' }]}>
+                          <Ionicons name={challenge.icon as any} size={20} color={challenge.color} />
                         </View>
-                        <Text style={styles.challengeProgressText}>{challenge.current} / {challenge.target} {challenge.unit}</Text>
-                      </View>
 
-                      <Text style={styles.challengeProgressPercent}>{progress}%</Text>
-                    </View>
-                  </Card>
+                        <View style={styles.challengeProgressInfo}>
+                          <Text style={styles.challengeProgressName}>{challenge.name}</Text>
+                          <View style={styles.challengeProgressBg}>
+                            <View style={[styles.challengeProgressFg, { width: `${Math.min(progress, 100)}%`, backgroundColor: challenge.color }]} />
+                          </View>
+                          <Text style={styles.challengeProgressText}>{challenge.current} / {challenge.target} {challenge.unit}</Text>
+                        </View>
+
+                        <Text style={styles.challengeProgressPercent}>{progress}%</Text>
+                      </View>
+                    </Card>
+                  </Pressable>
                 );
               })}
             </>
