@@ -172,7 +172,19 @@
     "available": "Diğer Mücadeleler",
     "join": "Katıl",
     "leave": "Ayrıl",
-    "viewAll": "Hepsini Gör"
+    "viewAll": "Hepsini Gör",
+    "detail": {
+      "progress": "İlerleme",
+      "completion": "Tamamlama",
+      "current": "Güncel",
+      "remaining": "Kalan",
+      "addProgress": "İlerleme Ekle",
+      "leave": "Mücadeleden Ayrıl",
+      "join": "Katıl",
+      "leaveConfirm": "Mücadeleden ayrılmak istediğinize emin misiniz?",
+      "joinSuccess": "Mücadeleye katıldınız!",
+      "progressAdded": "eklendi!"
+    }
   },
   "profile": {
     "about": "Hakkında",

@@ -172,7 +172,19 @@
     "available": "Other Challenges",
     "join": "Join",
     "leave": "Leave",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "detail": {
+      "progress": "Progress",
+      "completion": "Completion",
+      "current": "Current",
+      "remaining": "Remaining",
+      "addProgress": "Add Progress",
+      "leave": "Leave Challenge",
+      "join": "Join",
+      "leaveConfirm": "Are you sure you want to leave this challenge?",
+      "joinSuccess": "You joined the challenge!",
+      "progressAdded": "added!"
+    }
   },
   "profile": {
     "about": "About",
