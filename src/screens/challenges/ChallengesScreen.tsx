@@ -18,110 +18,128 @@ export const ChallengesScreen: React.FC = () => {
     const progress = Math.round((challenge.current / challenge.target) * 100);
 
     return (
-      <Card key={challenge.id} style={styles.challengeCard}>
-        <View style={styles.challengeContent}>
-          <View style={[styles.challengeIcon, { backgroundColor: challenge.color + '20' }]}>
-            <Ionicons name={challenge.icon as any} size={24} color={challenge.color} />
-          </View>
+      <Pressable
+        key={challenge.id}
+        style={styles.challengeCard}
+        onPress={() => {
+          if (isEnrolled) {
+            leaveChallenge(challenge.id);
+          } else {
+            enrollChallenge(challenge.id);
+          }
+        }}
+      >
+        <View style={[styles.challengeCardBg, { backgroundColor: challenge.color + '15' }]}>
+          <View style={styles.challengeCardContent}>
+            <View style={styles.challengeCardLeft}>
+              <View style={[styles.challengeIconBg, { backgroundColor: challenge.color + '25' }]}>
+                <Ionicons name={challenge.icon as any} size={28} color={challenge.color} />
+              </View>
 
-          <View style={styles.challengeInfo}>
-            <Text style={styles.challengeName}>{challenge.name}</Text>
-            <Text style={styles.challengeDesc}>{challenge.description}</Text>
+              <View style={styles.challengeCardInfo}>
+                <Text style={styles.challengeName}>{challenge.name}</Text>
+                <Text style={styles.challengeDesc}>{challenge.description}</Text>
+              </View>
+            </View>
 
-            {isEnrolled && (
-              <>
-                <View style={styles.progressBg}>
-                  <View style={[styles.progressFg, { width: `${Math.min(progress, 100)}%`, backgroundColor: challenge.color }]} />
+            <View style={styles.challengeCardRight}>
+              {isEnrolled ? (
+                <View style={styles.progressContainer}>
+                  <View style={styles.progressBg}>
+                    <View style={[styles.progressFg, { width: `${Math.min(progress, 100)}%`, backgroundColor: challenge.color }]} />
+                  </View>
+                  <View style={styles.progressStats}>
+                    <Text style={styles.progressPercent}>{progress}%</Text>
+                    <Text style={styles.progressText}>{challenge.current}/{challenge.target}</Text>
+                  </View>
                 </View>
-                <Text style={styles.progressText}>{challenge.current} / {challenge.target} {challenge.unit}</Text>
-              </>
-            )}
+              ) : (
+                <View style={[styles.enrollButton, { backgroundColor: challenge.color }]}>
+                  <Ionicons name="add" size={20} color="white" />
+                </View>
+              )}
+            </View>
           </View>
 
-          <Pressable
-            style={[
-              styles.actionButton,
-              { backgroundColor: challenge.color + '20' }
-            ]}
-            onPress={() => {
-              if (isEnrolled) {
-                leaveChallenge(challenge.id);
-              } else {
-                enrollChallenge(challenge.id);
-              }
-            }}
-          >
-            <Ionicons
-              name={isEnrolled ? 'checkmark' : 'add'}
-              size={20}
-              color={challenge.color}
-            />
-          </Pressable>
+          {isEnrolled && (
+            <View style={styles.enrolledBadge}>
+              <Ionicons name="checkmark-circle" size={16} color={challenge.color} />
+              <Text style={[styles.enrolledText, { color: challenge.color }]}>Katılıldı</Text>
+            </View>
+          )}
         </View>
-      </Card>
+      </Pressable>
     );
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Text style={styles.pageTitle}>{t('challenges.title')}</Text>
+    <SafeAreaView style={styles.safeContainer}>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.appTitle}>{t('challenges.title')}</Text>
+        </View>
 
-        {/* Enrolled Challenges */}
-        {enrolledChallenges.length > 0 && (
-          <>
-            <Text style={styles.sectionTitle}>{t('challenges.enrolled')}</Text>
-            {enrolledChallenges.map(ch => renderChallengeCard(ch, true))}
-          </>
-        )}
-
-        {/* Available Challenges */}
-        {availableChallenges.length > 0 && (
-          <>
-            <Text style={[styles.sectionTitle, { marginTop: theme.spacing.lg }]}>{t('challenges.available')}</Text>
-            {availableChallenges.map(ch => renderChallengeCard(ch, false))}
-          </>
-        )}
-      </ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.challengesList}>
+          {/* All Challenges */}
+          {[...enrolledChallenges, ...availableChallenges].map(ch =>
+            renderChallengeCard(ch, ch.enrolled)
+          )}
+          <View style={styles.bottomSpacing} />
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  safeContainer: {
     flex: 1,
     backgroundColor: theme.colors.background,
-    padding: theme.spacing.lg,
   },
-  pageTitle: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: theme.colors.textDark,
-    marginBottom: theme.spacing.lg,
+  container: {
+    flex: 1,
+    paddingHorizontal: theme.spacing.lg,
   },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: '700',
+  header: {
+    paddingVertical: theme.spacing.md,
+  },
+  appTitle: {
+    fontSize: theme.typography.sizes.xl,
+    fontWeight: theme.typography.weights.bold,
     color: theme.colors.textDark,
-    marginBottom: theme.spacing.md,
+  },
+  challengesList: {
+    flex: 1,
   },
   challengeCard: {
     marginBottom: theme.spacing.md,
-    padding: theme.spacing.lg,
+    borderRadius: 20,
+    overflow: 'hidden',
   },
-  challengeContent: {
+  challengeCardBg: {
+    padding: theme.spacing.lg,
+    borderRadius: 20,
+  },
+  challengeCardContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: theme.spacing.md,
+  },
+  challengeCardLeft: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     gap: theme.spacing.md,
   },
-  challengeIcon: {
+  challengeIconBg: {
     width: 56,
     height: 56,
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  challengeInfo: {
+  challengeCardInfo: {
     flex: 1,
   },
   challengeName: {
@@ -131,31 +149,64 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   challengeDesc: {
-    fontSize: 12,
+    fontSize: 11,
     color: theme.colors.textMuted,
-    marginBottom: 8,
+    marginBottom: 0,
+  },
+  challengeCardRight: {
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+  progressContainer: {
+    width: 60,
+    alignItems: 'flex-end',
+    gap: 4,
   },
   progressBg: {
+    width: 50,
     height: 4,
     backgroundColor: '#E2E8B9',
     borderRadius: 2,
-    marginBottom: 4,
   },
   progressFg: {
     height: '100%',
     borderRadius: 2,
   },
-  progressText: {
-    fontSize: 11,
-    color: theme.colors.textMuted,
-    fontWeight: '600',
+  progressStats: {
+    alignItems: 'flex-end',
   },
-  actionButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+  progressPercent: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: theme.colors.textDark,
+  },
+  progressText: {
+    fontSize: 10,
+    color: theme.colors.textMuted,
+    fontWeight: '500',
+  },
+  enrollButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  enrolledBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    marginTop: theme.spacing.sm,
+    paddingTop: theme.spacing.sm,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(0, 0, 0, 0.05)',
+  },
+  enrolledText: {
+    fontSize: 10,
+    fontWeight: '600',
+  },
+  bottomSpacing: {
+    height: 40,
   },
 });
 
