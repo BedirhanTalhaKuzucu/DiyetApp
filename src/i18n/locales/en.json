@@ -1,0 +1,218 @@
+{
+  "common": {
+    "appName": "Nourish",
+    "continue": "Continue",
+    "getStarted": "Get Started",
+    "alreadyHaveAccount": "I already have an account",
+    "createdBy": "Created by {{dietitian}}",
+    "cancelAnytime": "Cancel anytime",
+    "bestValue": "BEST VALUE",
+    "goldMember": "Gold Member",
+    "premiumAccess": "Premium Access",
+    "unlock": "Unlock",
+    "save": "Save",
+    "saved": "Saved",
+    "share": "Share",
+    "startCooking": "Start Cooking",
+    "premiumBadge": "Premium",
+    "dietitianTitle": "Dietitian",
+    "dietitianCredentials": "MSC, RD • CLINICAL NUTRITION",
+    "calories": "Calories",
+    "prepTime": "Prep Time",
+    "difficulty": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "kcal": "kcal",
+    "mins": "m",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "premiumAlertTitle": "Premium Feature",
+    "premiumAlertMessage": "Please upgrade to Premium subscription to unlock this feature.",
+    "subAlertTitle": "Congratulations!",
+    "subAlertMessage": "Your Premium subscription is now active!",
+    "logOut": "Log Out",
+    "add": "Add",
+    "added": "Added",
+    "remove": "Remove"
+  },
+  "navigation": {
+    "home": "Home",
+    "meals": "Plans",
+    "recipes": "Recipes",
+    "track": "Track",
+    "profile": "Profile"
+  },
+  "welcome": {
+    "subtitle": "Your personal guide to nutrition and sustainable healthy habits."
+  },
+  "goals": {
+    "title": "What is your primary goal?",
+    "subtitle": "Select the objective that best aligns with your health journey to curate your Nourish experience.",
+    "lose_weight": {
+      "title": "Lose weight",
+      "desc": "Sustainably reach your target weight"
+    },
+    "eat_healthier": {
+      "title": "Eat healthier",
+      "desc": "Optimize nutrient density and quality"
+    },
+    "build_habits": {
+      "title": "Build balanced habits",
+      "desc": "Consistency in routine and wellness"
+    },
+    "track_macros": {
+      "title": "Track calories and macros",
+      "desc": "Detailed logging for precise results"
+    },
+    "discover_recipes": {
+      "title": "Discover healthy recipes",
+      "desc": "Inspiration for culinary wellness"
+    },
+    "follow_plan": {
+      "title": "Follow a dietitian-created plan",
+      "desc": "Expert guidance every step of the way"
+    }
+  },
+  "home": {
+    "greeting": "Hello!",
+    "goodMorning": "Good morning, {{name}}",
+    "dailyGoal": "DAILY GOAL",
+    "done": "Done",
+    "hydration": "Hydration",
+    "edit": "Edit",
+    "goPremiumTitle": "Go Premium",
+    "goPremiumDesc": "Unlock personalized metabolic insights and AI coaching.",
+    "upgradeNow": "Upgrade Now",
+    "dailyChallenge": "Daily Challenge",
+    "progressTitle": "Today's Progress",
+    "caloriesLeft": "calories remaining",
+    "waterTracker": "Water Tracker",
+    "waterUnit": "cups",
+    "macros": {
+      "protein": "Protein",
+      "carbs": "Carbs",
+      "fat": "Fat"
+    },
+    "todayPlan": "Today's Meal Plan",
+    "quickActions": "Quick Actions",
+    "logMeal": "Log Meal",
+    "trackWater": "Track Water",
+    "viewRecipes": "View Recipes",
+    "startChallenge": "Start Challenge",
+    "premiumBannerTitle": "Unlock weekly meal plans and exclusive recipes",
+    "premiumBannerSubtitle": "Go Premium"
+  },
+  "meals": {
+    "weekSelector": "Weekly Plan",
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "snack": "Snack",
+    "subscribeCTA": "Subscribe to unlock all weekly plans"
+  },
+  "recipes": {
+    "macronutrients": "MACRONUTRIENTS",
+    "dietitianTip": "{{dietitian}}'s Tip",
+    "ingredients": "Ingredients",
+    "preparation": "Preparation"
+  },
+  "tracking": {
+    "calorieProgress": "Calorie Progress",
+    "waterProgress": "Water Progress",
+    "macroProgress": "Macro Progress",
+    "weightChart": "Weight Progress (Last 30 Days)",
+    "habits": "Habit Checklist",
+    "habit_water": "Drank enough water",
+    "habit_plan": "Completed today's plan",
+    "habit_walk": "Walked 30 minutes",
+    "habit_sugar": "Avoided sugary drinks",
+    "updateProgress": "Update Progress",
+    "weightTitle": "Weight Tracker",
+    "weightPlaceholder": "Enter weight (kg)",
+    "save": "Save",
+    "close": "Close",
+    "enterWeight": "Update Your Weight"
+  },
+  "premium": {
+    "title": "Go Premium",
+    "subtitle": "Get full access to exclusive dietitian-created content.",
+    "benefit1": "Weekly meal plans",
+    "benefit2": "Exclusive healthy recipes",
+    "benefit3": "Calorie and macro tracking",
+    "benefit4": "Auto-generated shopping lists",
+    "benefit5": "Detailed progress insights",
+    "benefit6": "Premium challenges & badges",
+    "benefit7": "Dietitian tips & comments",
+    "yearly": "Yearly Plan",
+    "monthly": "Monthly Plan",
+    "yearlyPrice": "$79.99 / yr",
+    "yearlySave": "Save 33% compared to monthly",
+    "monthlyPrice": "$9.99 / mo",
+    "monthlyBilling": "Billed every month",
+    "startPremium": "Start Premium",
+    "disclaimer": "Subscription will automatically renew unless canceled at least 24 hours before the end of the current period."
+  },
+  "shoppingList": {
+    "title": "Shopping List",
+    "generate": "Generate from this week's plan",
+    "share": "Share List",
+    "categories": {
+      "vegetables": "Vegetables",
+      "fruits": "Fruits",
+      "protein": "Protein",
+      "dairy": "Dairy",
+      "grains": "Grains",
+      "snacks": "Snacks"
+    }
+  },
+  "challenges": {
+    "title": "Challenges",
+    "enrolled": "My Challenges",
+    "available": "Other Challenges",
+    "join": "Join",
+    "leave": "Leave",
+    "viewAll": "View All"
+  },
+  "profile": {
+    "about": "About",
+    "weeklyFocus": "WEEKLY FOCUS",
+    "settings": "App Settings",
+    "notificationSettings": "Notification Settings",
+    "notificationDesc": "Daily reminders & meal alerts",
+    "privacy": "Privacy & Security",
+    "privacyDesc": "Data sharing & encryption",
+    "subStatus": "Subscription Status",
+    "subStatusDesc": "Premium Member"
+  },
+  "meal": {
+    "addMeal": "Add Meal",
+    "searchTab": "Search",
+    "manualTab": "Manual Entry",
+    "searchPlaceholder": "Search food...",
+    "noResults": "No results found",
+    "manualEntry": "Can't find it? Add manually",
+    "mealName": "Meal Name",
+    "calories": "Calories (kcal)",
+    "protein": "Protein (g)",
+    "carbs": "Carbs (g)",
+    "fat": "Fat (g)",
+    "portion": "Portion/Amount",
+    "addPhoto": "Add Photo (optional)",
+    "calculated": "Calculated Values",
+    "save": "Save",
+    "cancel": "Cancel",
+    "photoFrom": "Choose photo from?",
+    "camera": "Camera",
+    "gallery": "Gallery",
+    "cameraPermission": "Camera permission is required.",
+    "galleryPermission": "Gallery permission is required.",
+    "networkError": "Check your internet connection",
+    "apiError": "An error occurred during search",
+    "required": "This field is required",
+    "searching": "Searching...",
+    "quantity": "Quantity",
+    "unit": "Unit",
+    "gram": "gram"
+  }
+}

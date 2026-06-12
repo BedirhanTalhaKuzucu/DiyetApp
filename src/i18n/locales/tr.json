@@ -1,0 +1,218 @@
+{
+  "common": {
+    "appName": "Nourish",
+    "continue": "Devam Et",
+    "getStarted": "Başlayalım",
+    "alreadyHaveAccount": "Zaten bir hesabım var",
+    "createdBy": "{{dietitian}} tarafından oluşturuldu",
+    "cancelAnytime": "İstediğin zaman iptal edebilirsin",
+    "bestValue": "EN İYİ FİYAT",
+    "goldMember": "Altın Üye",
+    "premiumAccess": "Premium Erişim",
+    "unlock": "Kilidi Aç",
+    "save": "Kaydet",
+    "saved": "Kaydedildi",
+    "share": "Paylaş",
+    "startCooking": "Yemek Yapmaya Başla",
+    "premiumBadge": "Premium",
+    "dietitianTitle": "Diyetisyen",
+    "dietitianCredentials": "MSC, RD • KLİNİK BESLENME",
+    "calories": "Kalori",
+    "prepTime": "Hazırlama",
+    "difficulty": "Zorluk",
+    "easy": "Kolay",
+    "medium": "Orta",
+    "hard": "Zor",
+    "kcal": "kcal",
+    "mins": "dk",
+    "cancel": "İptal",
+    "ok": "Tamam",
+    "premiumAlertTitle": "Premium Özellik",
+    "premiumAlertMessage": "Bu içeriğe erişmek için lütfen Premium üyeliğe geçiş yapın.",
+    "subAlertTitle": "Tebrikler!",
+    "subAlertMessage": "Premium üyeliğiniz başarıyla etkinleştirildi!",
+    "logOut": "Çıkış Yap",
+    "add": "Ekle",
+    "added": "Eklendi",
+    "remove": "Çıkar"
+  },
+  "navigation": {
+    "home": "Anasayfa",
+    "meals": "Planlar",
+    "recipes": "Tarifler",
+    "track": "Takip",
+    "profile": "Profil"
+  },
+  "welcome": {
+    "subtitle": "Kişiselleştirilmiş beslenme ve sürdürülebilir sağlıklı alışkanlıklar rehberiniz."
+  },
+  "goals": {
+    "title": "Ana hedefiniz nedir?",
+    "subtitle": "Nourish deneyiminizi kişiselleştirmek için sağlık yolculuğunuza en uygun olan hedefi seçin.",
+    "lose_weight": {
+      "title": "Kilo vermek",
+      "desc": "Hedef kilonuza sağlıklı ve kalıcı yollarla ulaşın"
+    },
+    "eat_healthier": {
+      "title": "Daha sağlıklı beslenmek",
+      "desc": "Besin yoğunluğunu ve kalitesini optimize edin"
+    },
+    "build_habits": {
+      "title": "Dengeli alışkanlıklar edinmek",
+      "desc": "Günlük rutinlerinizde tutarlılık ve zindelik"
+    },
+    "track_macros": {
+      "title": "Kalori ve makro takibi",
+      "desc": "Net sonuçlar için detaylı besin günlüğü"
+    },
+    "discover_recipes": {
+      "title": "Sağlıklı tarifler keşfetmek",
+      "desc": "Mutfakta lezzetli ve sağlıklı esintiler"
+    },
+    "follow_plan": {
+      "title": "Diyetisyen planı uygulamak",
+      "desc": "Her adımda uzman rehberliği ve destek"
+    }
+  },
+  "home": {
+    "greeting": "Merhaba!",
+    "goodMorning": "Günaydın, {{name}}",
+    "dailyGoal": "GÜNLÜK HEDEF",
+    "done": "Tamamlandı",
+    "hydration": "Sıvı Alımı",
+    "edit": "Düzenle",
+    "goPremiumTitle": "Premium'a Geç",
+    "goPremiumDesc": "Kişiselleştirilmiş metabolik içgörülerin ve yapay zeka koçluğunun kilidini açın.",
+    "upgradeNow": "Şimdi Yükselt",
+    "dailyChallenge": "Günlük Görev",
+    "progressTitle": "Bugünkü İlerlemeniz",
+    "caloriesLeft": "kalan kalori",
+    "waterTracker": "Su Takibi",
+    "waterUnit": "bardak",
+    "macros": {
+      "protein": "Protein",
+      "carbs": "Karbonhidrat",
+      "fat": "Yağ"
+    },
+    "todayPlan": "Bugünün Beslenme Planı",
+    "quickActions": "Hızlı İşlemler",
+    "logMeal": "Öğün Kaydet",
+    "trackWater": "Su Ekle",
+    "viewRecipes": "Tarifleri Gör",
+    "startChallenge": "Mücadeleye Başla",
+    "premiumBannerTitle": "Haftalık beslenme planları ve özel tariflerin kilidini açın",
+    "premiumBannerSubtitle": "Premium'a Geç"
+  },
+  "meals": {
+    "weekSelector": "Haftalık Plan",
+    "breakfast": "Kahvaltı",
+    "lunch": "Öğle Yemeği",
+    "dinner": "Akşam Yemeği",
+    "snack": "Ara Öğün",
+    "subscribeCTA": "Haftalık planların tamamına erişmek için abone olun"
+  },
+  "recipes": {
+    "macronutrients": "MAKRO BESİNLER",
+    "dietitianTip": "{{dietitian}} Önerisi",
+    "ingredients": "Malzemeler",
+    "preparation": "Hazırlanışı"
+  },
+  "tracking": {
+    "calorieProgress": "Kalori İlerlemesi",
+    "waterProgress": "Günlük Su Tüketimi",
+    "macroProgress": "Makro İlerlemesi",
+    "weightChart": "Kilo Değişim Grafiği (Son 30 Gün)",
+    "habits": "Alışkanlık Kontrolü",
+    "habit_water": "Yeterli miktarda su içtim",
+    "habit_plan": "Bugünün planını tamamladım",
+    "habit_walk": "30 dakika yürüyüş yaptım",
+    "habit_sugar": "Şekerli içeceklerden kaçındım",
+    "updateProgress": "İlerlemeni Güncelle",
+    "weightTitle": "Kilo Girişi",
+    "weightPlaceholder": "Kilonuzu girin (kg)",
+    "save": "Kaydet",
+    "close": "Kapat",
+    "enterWeight": "Kilonuzu Güncelleyin"
+  },
+  "premium": {
+    "title": "Premium'a Geç",
+    "subtitle": "Diyetisyen tarafından hazırlanan özel içeriklere sınırsız erişim sağlayın.",
+    "benefit1": "Haftalık beslenme planları",
+    "benefit2": "Özel sağlıklı tarifler",
+    "benefit3": "Kalori ve makro takibi",
+    "benefit4": "Otomatik alışveriş listeleri",
+    "benefit5": "Detaylı ilerleme grafikleri",
+    "benefit6": "Premium mücadeleler ve rozetler",
+    "benefit7": "Birebir diyetisyen ipuçları",
+    "yearly": "Yıllık Plan",
+    "monthly": "Aylık Plan",
+    "yearlyPrice": "$79.99 / yıl",
+    "yearlySave": "Aylık plana kıyasla %33 tasarruf edin",
+    "monthlyPrice": "$9.99 / ay",
+    "monthlyBilling": "Her ay faturalandırılır",
+    "startPremium": "Premium'u Başlat",
+    "disclaimer": "Abonelik, cari dönemin bitiminden en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir."
+  },
+  "shoppingList": {
+    "title": "Alışveriş Listesi",
+    "generate": "Bu haftanın planından oluştur",
+    "share": "Listeyi Paylaş",
+    "categories": {
+      "vegetables": "Sebzeler",
+      "fruits": "Meyveler",
+      "protein": "Protein Kaynakları",
+      "dairy": "Süt ve Süt Ürünleri",
+      "grains": "Tahıllar",
+      "snacks": "Sağlıklı Atıştırmalıklar"
+    }
+  },
+  "challenges": {
+    "title": "Mücadeleler",
+    "enrolled": "Katıldığım Mücadeleler",
+    "available": "Diğer Mücadeleler",
+    "join": "Katıl",
+    "leave": "Ayrıl",
+    "viewAll": "Hepsini Gör"
+  },
+  "profile": {
+    "about": "Hakkında",
+    "weeklyFocus": "HAFTALIK ODAK",
+    "settings": "Uygulama Ayarları",
+    "notificationSettings": "Bildirim Ayarları",
+    "notificationDesc": "Günlük hatırlatıcılar & öğün uyarıları",
+    "privacy": "Gizlilik & Güvenlik",
+    "privacyDesc": "Veri paylaşımı & şifreleme",
+    "subStatus": "Abonelik Durumu",
+    "subStatusDesc": "Premium Üye"
+  },
+  "meal": {
+    "addMeal": "Öğün Ekle",
+    "searchTab": "Ara",
+    "manualTab": "Manuel Ekle",
+    "searchPlaceholder": "Yemek ara...",
+    "noResults": "Sonuç bulunamadı",
+    "manualEntry": "Bulamadın mı? Manuel ekle",
+    "mealName": "Yemek Adı",
+    "calories": "Kalori (kcal)",
+    "protein": "Protein (g)",
+    "carbs": "Karbonhidrat (g)",
+    "fat": "Yağ (g)",
+    "portion": "Porsiyon/Miktar",
+    "addPhoto": "Fotoğraf Ekle (opsiyonel)",
+    "calculated": "Hesaplanan Değerler",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "photoFrom": "Fotoğraf nereden?",
+    "camera": "Kamera",
+    "gallery": "Galeri",
+    "cameraPermission": "Kamera erişimi için izin vermeniz gerekiyor.",
+    "galleryPermission": "Galeri erişimi için izin vermeniz gerekiyor.",
+    "networkError": "İnternet bağlantınızı kontrol edin",
+    "apiError": "Arama sırasında bir hata oluştu",
+    "required": "Bu alan zorunludur",
+    "searching": "Aranıyor...",
+    "quantity": "Miktar",
+    "unit": "Birim",
+    "gram": "gram"
+  }
+}
