@@ -70,7 +70,7 @@ export const ChallengesScreen: React.FC = () => {
         {/* Enrolled Challenges */}
         {enrolledChallenges.length > 0 && (
           <>
-            <Text style={styles.sectionTitle}>Katıldığım Mücadeleler</Text>
+            <Text style={styles.sectionTitle}>{t('challenges.enrolled')}</Text>
             {enrolledChallenges.map(ch => renderChallengeCard(ch, true))}
           </>
         )}
@@ -78,7 +78,7 @@ export const ChallengesScreen: React.FC = () => {
         {/* Available Challenges */}
         {availableChallenges.length > 0 && (
           <>
-            <Text style={[styles.sectionTitle, { marginTop: theme.spacing.lg }]}>Diğer Mücadeleler</Text>
+            <Text style={[styles.sectionTitle, { marginTop: theme.spacing.lg }]}>{t('challenges.available')}</Text>
             {availableChallenges.map(ch => renderChallengeCard(ch, false))}
           </>
         )}

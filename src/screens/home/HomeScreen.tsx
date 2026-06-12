@@ -352,9 +352,9 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
           return enrolledChallenges.length > 0 ? (
             <>
               <View style={styles.challengeProgressHeader}>
-                <Text style={styles.sectionTitle}>Mücadeleler</Text>
+                <Text style={styles.sectionTitle}>{t('challenges.title')}</Text>
                 <Pressable onPress={() => navigation.navigate('Challenges')}>
-                  <Text style={styles.editBtnText}>Hepsini Gör</Text>
+                  <Text style={styles.editBtnText}>{t('challenges.viewAll')}</Text>
                 </Pressable>
               </View>
               {enrolledChallenges.slice(0, 2).map((challenge) => {
