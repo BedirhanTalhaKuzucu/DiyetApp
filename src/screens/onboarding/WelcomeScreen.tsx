@@ -33,7 +33,7 @@ export const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
 
       <View style={styles.contentContainer}>
         <Text style={styles.tagline}>
-          Nourish
+          diyetApp
         </Text>
         <Text style={styles.subtitle}>
           {t('welcome.subtitle')}

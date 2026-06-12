@@ -114,7 +114,7 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
               style={styles.avatar} 
             />
           </Pressable>
-          <Text style={styles.brandTitle}>Nourish</Text>
+          <Text style={styles.brandTitle}>diyetApp</Text>
           <View style={styles.badgeWrapper}>
             <Ionicons name="ribbon-sharp" size={18} color={theme.colors.primary} />
           </View>
