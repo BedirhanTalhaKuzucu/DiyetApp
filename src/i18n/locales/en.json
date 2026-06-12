@@ -39,7 +39,7 @@
   "navigation": {
     "home": "Home",
     "meals": "Plans",
-    "recipes": "Recipes",
+    "challenges": "Challenges",
     "track": "Track",
     "profile": "Profile"
   },
@@ -98,7 +98,7 @@
     "quickActions": "Quick Actions",
     "logMeal": "Log Meal",
     "trackWater": "Track Water",
-    "viewRecipes": "View Recipes",
+    "viewPlans": "View Plans",
     "startChallenge": "Start Challenge",
     "premiumBannerTitle": "Unlock weekly meal plans and exclusive recipes",
     "premiumBannerSubtitle": "Go Premium"

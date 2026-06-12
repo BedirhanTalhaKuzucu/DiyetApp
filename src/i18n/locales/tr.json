@@ -39,7 +39,7 @@
   "navigation": {
     "home": "Anasayfa",
     "meals": "Planlar",
-    "recipes": "Tarifler",
+    "challenges": "Mücadeleler",
     "track": "Takip",
     "profile": "Profil"
   },
@@ -98,7 +98,7 @@
     "quickActions": "Hızlı İşlemler",
     "logMeal": "Öğün Kaydet",
     "trackWater": "Su Ekle",
-    "viewRecipes": "Tarifleri Gör",
+    "viewPlans": "Planları Gör",
     "startChallenge": "Mücadeleye Başla",
     "premiumBannerTitle": "Haftalık beslenme planları ve özel tariflerin kilidini açın",
     "premiumBannerSubtitle": "Premium'a Geç"

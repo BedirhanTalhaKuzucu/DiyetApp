@@ -1,0 +1,160 @@
+<h2>Öğün Kaydetme Ekranı - Yaklaşım Seçimi</h2>
+<p class="subtitle">Hangi yaklaşım sizin için daha kullanışlı olur?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>📸 Fotoğraf Öncelikli</h3>
+      <div class="mockup" style="margin: 16px 0; padding: 12px; background: #f8f9fa; border-radius: 8px;">
+        <div style="text-align: center; padding: 40px 20px; background: #EEF2D3; border: 2px dashed #A3C585; border-radius: 12px; margin-bottom: 12px;">
+          <div style="font-size: 48px; margin-bottom: 8px;">📷</div>
+          <div style="font-size: 14px; color: #666;">Yemeğinizi Fotoğraflayın</div>
+          <div style="font-size: 11px; color: #999; margin-top: 4px;">veya galeriden seçin</div>
+        </div>
+        <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+          <button class="mock-button" style="flex: 1; padding: 12px; background: #A3C585; color: white; border: none; border-radius: 8px; font-size: 13px;">🔍 Fotoğraftan Tanı (AI)</button>
+          <button class="mock-button" style="flex: 1; padding: 12px; background: white; border: 1px solid #ddd; border-radius: 8px; font-size: 13px;">📝 Manuel Gir</button>
+        </div>
+        <div style="font-size: 11px; color: #666; text-align: center; margin-top: 8px;">↓ AI tanımadan sonra ↓</div>
+        <div style="padding: 12px; background: white; border-radius: 8px; margin-top: 8px;">
+          <div style="font-weight: 600; font-size: 13px; margin-bottom: 8px;">Tespit Edilen:</div>
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px; background: #f8f9fa; border-radius: 6px; margin-bottom: 6px;">
+            <span style="font-size: 12px;">🥗 Karışık Salata</span>
+            <span style="font-size: 11px; color: #666;">~320 kcal</span>
+          </div>
+          <div style="display: flex; gap: 4px; margin-top: 8px;">
+            <input class="mock-input" placeholder="Porsiyon: 1" style="flex: 1; padding: 8px; font-size: 12px; border: 1px solid #ddd; border-radius: 6px;">
+            <button class="mock-button" style="padding: 8px 16px; background: #A3C585; color: white; border: none; border-radius: 6px;">✓ Kaydet</button>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros">
+          <h4>Artıları</h4>
+          <ul style="font-size: 12px; margin: 0; padding-left: 20px;">
+            <li>Hızlı ve kolay - sadece fotoğraf çek</li>
+            <li>AI otomatik yemek tanıma</li>
+            <li>Görsel kayıt tutma</li>
+            <li>Manuel girişe de izin veriyor</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Eksileri</h4>
+          <ul style="font-size: 12px; margin: 0; padding-left: 20px;">
+            <li>AI tanıma %100 doğru olmayabilir</li>
+            <li>Kamera izni gerekli</li>
+            <li>İnternet bağlantısı gerekli (API)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>🔍 Arama Öncelikli</h3>
+      <div class="mockup" style="margin: 16px 0; padding: 12px; background: #f8f9fa; border-radius: 8px;">
+        <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+          <input class="mock-input" placeholder="Yemek ara... (örn: tavuk göğsü)" style="flex: 1; padding: 12px; font-size: 13px; border: 1px solid #ddd; border-radius: 8px;">
+          <button class="mock-button" style="padding: 12px 16px; background: #A3C585; color: white; border: none; border-radius: 8px;">🔍</button>
+        </div>
+        <div style="font-size: 11px; color: #666; margin-bottom: 8px;">Popüler:</div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
+          <span style="padding: 6px 12px; background: #EEF2D3; border-radius: 16px; font-size: 11px; color: #666;">🍗 Tavuk</span>
+          <span style="padding: 6px 12px; background: #EEF2D3; border-radius: 16px; font-size: 11px; color: #666;">🍚 Pilav</span>
+          <span style="padding: 6px 12px; background: #EEF2D3; border-radius: 16px; font-size: 11px; color: #666;">🥗 Salata</span>
+          <span style="padding: 6px 12px; background: #EEF2D3; border-radius: 16px; font-size: 11px; color: #666;">🥚 Yumurta</span>
+        </div>
+        <div style="background: white; border-radius: 8px; overflow: hidden;">
+          <div style="padding: 10px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 13px; font-weight: 600;">Izgara Tavuk Göğsü</div>
+              <div style="font-size: 11px; color: #666;">100g • 165 kcal • P: 31g C: 0g F: 3.6g</div>
+            </div>
+            <button class="mock-button" style="padding: 6px 12px; background: #A3C585; color: white; border: none; border-radius: 6px; font-size: 11px;">+ Ekle</button>
+          </div>
+          <div style="padding: 10px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 13px; font-weight: 600;">Haşlanmış Tavuk</div>
+              <div style="font-size: 11px; color: #666;">100g • 140 kcal • P: 28g C: 0g F: 2.5g</div>
+            </div>
+            <button class="mock-button" style="padding: 6px 12px; background: #A3C585; color: white; border: none; border-radius: 6px; font-size: 11px;">+ Ekle</button>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 12px;">
+          <button class="mock-button" style="padding: 10px 20px; background: white; border: 1px solid #ddd; border-radius: 8px; font-size: 12px;">📸 veya Fotoğraf Çek</button>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros">
+          <h4>Artıları</h4>
+          <ul style="font-size: 12px; margin: 0; padding-left: 20px;">
+            <li>Kesin kalori ve makro değerleri</li>
+            <li>Geniş yemek veritabanı</li>
+            <li>Hızlı arama ve ekleme</li>
+            <li>İnternet olmadan da çalışabilir (cache)</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Eksileri</h4>
+          <ul style="font-size: 12px; margin: 0; padding-left: 20px;">
+            <li>Manuel arama gerekli</li>
+            <li>Fotoğraf kayıt ikincil</li>
+            <li>Biraz daha fazla adım</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>⚡ Karma Yaklaşım (Sekmeli)</h3>
+      <div class="mockup" style="margin: 16px 0; padding: 12px; background: #f8f9fa; border-radius: 8px;">
+        <div style="display: flex; gap: 4px; margin-bottom: 12px; border-bottom: 2px solid #eee;">
+          <button class="mock-button" style="flex: 1; padding: 10px; background: #A3C585; color: white; border: none; border-bottom: 3px solid #A3C585; font-size: 12px; font-weight: 600;">📷 Fotoğraf</button>
+          <button class="mock-button" style="flex: 1; padding: 10px; background: transparent; border: none; color: #666; font-size: 12px;">🔍 Ara</button>
+          <button class="mock-button" style="flex: 1; padding: 10px; background: transparent; border: none; color: #666; font-size: 12px;">📝 Manuel</button>
+        </div>
+
+        <div style="text-align: center; padding: 40px 20px; background: #EEF2D3; border: 2px dashed #A3C585; border-radius: 12px; margin-bottom: 12px;">
+          <div style="font-size: 48px; margin-bottom: 8px;">📷</div>
+          <div style="font-size: 14px; color: #666;">Fotoğraf Çek veya Galeriden Seç</div>
+        </div>
+
+        <div style="font-size: 10px; color: #999; text-align: center; padding: 8px; background: #f0f0f0; border-radius: 6px; margin-top: 8px;">
+          💡 Sekme 2'de arama yapabilir, Sekme 3'te tam manuel girebilirsiniz
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros">
+          <h4>Artıları</h4>
+          <ul style="font-size: 12px; margin: 0; padding-left: 20px;">
+            <li>Tüm yöntemler tek ekranda</li>
+            <li>Kullanıcı istediğini seçer</li>
+            <li>Esnek ve güçlü</li>
+            <li>Her senaryoya uygun</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Eksileri</h4>
+          <ul style="font-size: 12px; margin: 0; padding-left: 20px;">
+            <li>Daha karmaşık UI</li>
+            <li>Yeni kullanıcılar için kafa karıştırıcı olabilir</li>
+            <li>3 farklı akış geliştirmek gerekir</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 24px; padding: 16px; background: #FFF9E6; border-left: 4px solid #FFD700; border-radius: 4px;">
+  <h4 style="margin: 0 0 8px 0; font-size: 14px; color: #856404;">💡 Önemli Not</h4>
+  <p style="margin: 0; font-size: 12px; color: #856404; line-height: 1.6;">
+    Tüm yaklaşımlarda <strong>gram/porsiyon seçimi</strong>, <strong>hazır yemek arama</strong> ve <strong>kalori/makro API entegrasyonu</strong> bulunacak. Seçim sadece <em>ana akış</em> hakkında.
+  </p>
+</div>

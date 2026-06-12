@@ -48,12 +48,10 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
   const [isAddMealModalVisible, setIsAddMealModalVisible] = useState(false);
 
   const handleQuickAction = (action: string) => {
-    if (action === 'recipes') {
-      navigation.navigate('Recipes');
-    } else if (action === 'water') {
+    if (action === 'water') {
       incrementWater();
-    } else if (action === 'challenges') {
-      navigation.navigate('Challenges');
+    } else if (action === 'plans') {
+      navigation.navigate('Plans');
     } else if (action === 'log_meal') {
       setIsAddMealModalVisible(true);
     } else {
@@ -218,17 +216,11 @@ export const HomeScreen: React.FC<Props> = ({ navigation }) => {
             </View>
             <Text style={styles.quickText}>{t('home.trackWater')}</Text>
           </Pressable>
-          <Pressable style={styles.quickCard} onPress={() => handleQuickAction('recipes')}>
+          <Pressable style={styles.quickCard} onPress={() => handleQuickAction('plans')}>
             <View style={styles.quickIconCircle}>
-              <Ionicons name="book-outline" size={20} color={theme.colors.primary} />
+              <Ionicons name="restaurant-outline" size={20} color={theme.colors.primary} />
             </View>
-            <Text style={styles.quickText}>{t('home.viewRecipes')}</Text>
-          </Pressable>
-          <Pressable style={styles.quickCard} onPress={() => handleQuickAction('challenges')}>
-            <View style={styles.quickIconCircle}>
-              <Ionicons name="flash-outline" size={20} color={theme.colors.primary} />
-            </View>
-            <Text style={styles.quickText}>{t('home.dailyChallenge')}</Text>
+            <Text style={styles.quickText}>{t('home.viewPlans')}</Text>
           </Pressable>
         </View>
 
