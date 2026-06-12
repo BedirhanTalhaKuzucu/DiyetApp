@@ -17,6 +17,7 @@ import TrackingScreen from '../screens/tracking/TrackingScreen';
 import PremiumSubscriptionScreen from '../screens/premium/PremiumSubscriptionScreen';
 import ShoppingListScreen from '../screens/shoppingList/ShoppingListScreen';
 import ChallengesScreen from '../screens/challenges/ChallengesScreen';
+import ChallengeDetailScreen from '../screens/challenges/ChallengeDetailScreen';
 import ProfileScreen from '../screens/profile/ProfileScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -148,6 +149,7 @@ export const Navigation = () => {
       <Stack.Screen name="Premium" component={PremiumSubscriptionScreen} />
       <Stack.Screen name="ShoppingList" component={ShoppingListScreen} />
       <Stack.Screen name="Challenges" component={ChallengesScreen} />
+      <Stack.Screen name="ChallengeDetail" component={ChallengeDetailScreen} />
     </Stack.Navigator>
   );
 };

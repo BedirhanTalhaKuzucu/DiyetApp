@@ -6,6 +6,7 @@ export type RootStackParamList = {
   Premium: undefined;
   ShoppingList: undefined;
   Challenges: undefined;
+  ChallengeDetail: { challengeId: string };
 };
 
 export type MainTabParamList = {
