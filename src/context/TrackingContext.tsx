@@ -69,6 +69,7 @@ interface TrackingContextType {
   challenges: Challenge[];
   enrollChallenge: (challengeId: string) => void;
   leaveChallenge: (challengeId: string) => void;
+  updateChallengeProgress: (challengeId: string, increment: number) => void;
 
   // Operations
   toggleMeal: (mealId: string) => void;
@@ -187,6 +188,16 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     );
   };
 
+  const updateChallengeProgress = (challengeId: string, increment: number) => {
+    setChallenges(prev =>
+      prev.map(ch =>
+        ch.id === challengeId
+          ? { ...ch, current: Math.min(ch.current + increment, ch.target) }
+          : ch
+      )
+    );
+  };
+
   return (
     <TrackingContext.Provider
       value={{
@@ -216,6 +227,7 @@ export const TrackingProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         challenges,
         enrollChallenge,
         leaveChallenge,
+        updateChallengeProgress,
       }}
     >
       {children}
