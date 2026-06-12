@@ -41,6 +41,19 @@ const TabIcon: React.FC<TabIconProps> = ({ name, focused, color }) => {
   );
 };
 
+const ChallengesStackNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="ChallengesMain" component={ChallengesScreen} />
+      <Stack.Screen name="ChallengeDetail" component={ChallengeDetailScreen} />
+    </Stack.Navigator>
+  );
+};
+
 const MainTabNavigator = () => {
   const { t } = useTranslation();
 
@@ -93,7 +106,7 @@ const MainTabNavigator = () => {
       />
       <Tab.Screen
         name="Challenges"
-        component={ChallengesScreen}
+        component={ChallengesStackNavigator}
         options={{
           tabBarLabel: t('navigation.challenges'),
           tabBarIcon: ({ focused, color }) => (
@@ -142,14 +155,24 @@ const styles = StyleSheet.create({
 export const Navigation = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="GoalSelection" component={GoalSelectionScreen} />
-      <Stack.Screen name="MainApp" component={MainTabNavigator} />
+      <Stack.Screen
+        name="Welcome"
+        component={WelcomeScreen}
+        options={{ gestureEnabled: false, animationEnabled: false }}
+      />
+      <Stack.Screen
+        name="GoalSelection"
+        component={GoalSelectionScreen}
+        options={{ gestureEnabled: false, animationEnabled: false }}
+      />
+      <Stack.Screen
+        name="MainApp"
+        component={MainTabNavigator}
+        options={{ gestureEnabled: false, animationEnabled: false }}
+      />
       <Stack.Screen name="RecipeDetail" component={RecipeDetailScreen} />
       <Stack.Screen name="Premium" component={PremiumSubscriptionScreen} />
       <Stack.Screen name="ShoppingList" component={ShoppingListScreen} />
-      <Stack.Screen name="Challenges" component={ChallengesScreen} />
-      <Stack.Screen name="ChallengeDetail" component={ChallengeDetailScreen} />
     </Stack.Navigator>
   );
 };

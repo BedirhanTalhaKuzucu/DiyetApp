@@ -3,12 +3,12 @@ import { StyleSheet, Text, View, ScrollView, SafeAreaView, Pressable, Alert } fr
 import { useTranslation } from 'react-i18next';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
-import { RootStackParamList } from '../../types/navigation';
+import { ChallengesStackParamList } from '../../types/navigation';
 import { theme } from '../../theme/theme';
 import { Card } from '../../components/cards/Card';
 import { useTracking } from '../../context/TrackingContext';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'ChallengeDetail'>;
+type Props = NativeStackScreenProps<ChallengesStackParamList, 'ChallengeDetail'>;
 
 export const ChallengeDetailScreen: React.FC<Props> = ({ route, navigation }) => {
   const { t } = useTranslation();

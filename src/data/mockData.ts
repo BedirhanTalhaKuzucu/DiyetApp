@@ -60,18 +60,18 @@ export interface ShoppingItem {
 }
 
 export const dietitianProfile = {
-  name: ‘Buse Simge’,
-  credentials: ‘MSC, RD • CLINICAL NUTRITION’,
-  imagePlaceholder: ‘https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop’,
-  instagram: ‘@bubesimge.nutrition’,
-  bioTr: ‘12 yılı aşkın klinik deneyimiyle Buse Simge, metabolik sağlık ve bitki bazlı beslenme konularında uzmanlaşmıştır. Hem zihni hem de bedeni iyileştirmek ve beslemek için bütünsel gıdaların gücüne inanmaktadır. Yaklaşımı kişiselleştirilmiş, bilimsel doğrulukla derinden bütünleşmiştir.’,
-  bioEn: ‘With over 12 years of clinical experience, Buse Simge specializes in metabolic health and plant-based nutrition. She believes in the power of whole foods to heal and nourish both mind and body. Her approach is editorial, personalized, and deeply rooted in scientific accuracy.’,
-  tagsTr: [‘METABOLİK SAĞLIK’, ‘BİTKİ BAZLI’, ‘BAĞIRSAK SAĞLIĞI’],
-  tagsEn: [‘METABOLIC HEALTH’, ‘PLANT-BASED’, ‘GUT WELLNESS’],
-  weeklyFocusTr: ‘Bu hafta, yenileyici hidrasyona odaklanalım. Sabah içtiğiniz suya bir nane yaprağı veya bir dilim salatalık eklemek, basit bir alışkanlığı özenli bir ritüele dönüştürebilir.’,
-  weeklyFocusEn: ‘This week, let’s focus on restorative hydration. Adding just a sprig of mint or a slice of cucumber to your morning water can transform a simple habit into a ritual of care.’,
-  messageTr: ‘Sevgilerle, Buse Simge’,
-  messageEn: ‘Warmly, Buse Simge’
+  name: 'Buse Simge',
+  credentials: 'MSC, RD • CLINICAL NUTRITION',
+  imagePlaceholder: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop',
+  instagram: '@bubesimge.nutrition',
+  bioTr: '12 yılı aşkın klinik deneyimiyle Buse Simge, metabolik sağlık ve bitki bazlı beslenme konularında uzmanlaşmıştır. Hem zihni hem de bedeni iyileştirmek ve beslemek için bütünsel gıdaların gücüne inanmaktadır. Yaklaşımı kişiselleştirilmiş, bilimsel doğrulukla derinden bütünleşmiştir.',
+  bioEn: 'With over 12 years of clinical experience, Buse Simge specializes in metabolic health and plant-based nutrition. She believes in the power of whole foods to heal and nourish both mind and body. Her approach is editorial, personalized, and deeply rooted in scientific accuracy.',
+  tagsTr: ['METABOLİK SAĞLIK', 'BİTKİ BAZLI', 'BAĞIRSAK SAĞLIĞI'],
+  tagsEn: ['METABOLIC HEALTH', 'PLANT-BASED', 'GUT WELLNESS'],
+  weeklyFocusTr: 'Bu hafta, yenileyici hidrasyona odaklanalım. Sabah içtiğiniz suya bir nane yaprağı veya bir dilim salatalık eklemek, basit bir alışkanlığı özenli bir ritüele dönüştürebilir.',
+  weeklyFocusEn: 'This week, let\'s focus on restorative hydration. Adding just a sprig of mint or a slice of cucumber to your morning water can transform a simple habit into a ritual of care.',
+  messageTr: 'Sevgilerle, Buse Simge',
+  messageEn: 'Warmly, Buse Simge'
 };
 
 export const mockGoals = [
@@ -159,7 +159,7 @@ export const mockRecipes: Recipe[] = [
       '1 tbsp Olive Oil & Lemon juice'
     ],
     stepsTr: [
-      'Fırını 200°C’ye ısıtın. Nohutları kurulayın, zeytinyağı, tuz ve baharatlarla harmanlayın.',
+      'Fırını 200°C\'ye ısıtın. Nohutları kurulayın, zeytinyağı, tuz ve baharatlarla harmanlayın.',
       'Fırın tepsisine yayın ve çıtırdayıp altın sarısı olana kadar 15-20 dakika fırınlayın.',
       'Nohutlar fırındayken roka, salatalık ve domateslerden tabanı hazırlayın. Üzerine limonlu tahin sosu gezdirin.'
     ],

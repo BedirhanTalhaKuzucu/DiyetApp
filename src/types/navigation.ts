@@ -5,8 +5,6 @@ export type RootStackParamList = {
   RecipeDetail: { recipeId: string };
   Premium: undefined;
   ShoppingList: undefined;
-  Challenges: undefined;
-  ChallengeDetail: { challengeId: string };
 };
 
 export type MainTabParamList = {
@@ -15,4 +13,9 @@ export type MainTabParamList = {
   Challenges: undefined;
   Tracking: undefined;
   Profile: undefined;
+};
+
+export type ChallengesStackParamList = {
+  ChallengesMain: undefined;
+  ChallengeDetail: { challengeId: string };
 };

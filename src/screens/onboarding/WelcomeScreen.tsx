@@ -42,11 +42,11 @@ export const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
         <View style={styles.buttonContainer}>
           <PrimaryButton
             title={t('common.getStarted')}
-            onPress={() => navigation.navigate('GoalSelection')}
+            onPress={() => navigation.replace('GoalSelection')}
             hasArrow
           />
-          
-          <Pressable style={styles.linkButton} onPress={() => navigation.navigate('MainApp')}>
+
+          <Pressable style={styles.linkButton} onPress={() => navigation.replace('MainApp')}>
             <Text style={styles.linkLabel}>{t('common.alreadyHaveAccount')}</Text>
           </Pressable>
         </View>

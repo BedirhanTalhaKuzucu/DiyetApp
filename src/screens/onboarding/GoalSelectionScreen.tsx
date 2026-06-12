@@ -16,7 +16,7 @@ export const GoalSelectionScreen: React.FC<Props> = ({ navigation }) => {
   const [selectedGoal, setSelectedGoal] = useState<string>('lose_weight');
 
   const handleContinue = () => {
-    navigation.navigate('MainApp');
+    navigation.replace('MainApp');
   };
 
   return (

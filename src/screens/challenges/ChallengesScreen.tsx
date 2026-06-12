@@ -3,22 +3,13 @@ import { View, Text, StyleSheet, ScrollView, SafeAreaView, Pressable } from 'rea
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { CompositeNavigationProp } from '@react-navigation/native';
-import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { RootStackParamList, MainTabParamList } from '../../types/navigation';
+import { ChallengesStackParamList } from '../../types/navigation';
 import { theme } from '../../theme/theme';
 import { Card } from '../../components/cards/Card';
 import { useTracking } from '../../context/TrackingContext';
 import { Challenge } from '../../types/meal';
 
-type ChallengesScreenNavigationProp = CompositeNavigationProp<
-  BottomTabNavigationProp<MainTabParamList, 'Challenges'>,
-  NativeStackScreenProps<RootStackParamList>['navigation']
->;
-
-interface Props {
-  navigation: ChallengesScreenNavigationProp;
-}
+type Props = NativeStackScreenProps<ChallengesStackParamList, 'ChallengesMain'>;
 
 export const ChallengesScreen: React.FC<Props> = ({ navigation }) => {
   const { t } = useTranslation();
